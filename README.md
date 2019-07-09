@@ -6,7 +6,8 @@ Fork and clone this repo. On your fork, answer and commit the follow questions. 
 ## Question 1
 
 `var userName: String?`
-```
+
+```swift
 Write 3 different ways of safely unwrapping and printing the value of `userName`.  If it is nil, print "No name".
 
 - Method one: Check for nil and force unwrap
@@ -44,8 +45,7 @@ print(unwrappedUserName)
 
 Given optional string `backgroundColor`, write code that safely unwraps and prints it. If backgroundColor is nil, give it a value.
 
-`var backgroundColor: String?`
-```
+```swift
 var backgroundColor : String?
 if let unwrappedBackgroundColor = backgroundColor {
         print(unwrappedBackgroundColor)
@@ -59,9 +59,6 @@ if let unwrappedBackgroundColor = backgroundColor {
 Given an optional width and an optional height of a rectangle, write code that calculates and prints the area. Print an error message if either value is nil.
 
 ```swift
-var width: Double?
-var height: Double?
-```
 var width: Double? = 7.0
 var height: Double?
     if width == nil || height == nil {
@@ -83,6 +80,8 @@ var name: String?
 var age: Int?
 var height: Double?
 ```
+```swift
+
 var name: String? = "Eric" //entered a value
 var age: Int?   //entered no value, to test result with 'nil'
 var height: Double? = 6.0 //entered value
@@ -103,7 +102,8 @@ var firstName: String = "Johnny"
 var middleName: String?
 var lastName: String = "Stone"
 ```
-```
+```swift
+
 var firstName: String = "Johnny"
 var middleName: String? = "Moon" //add value
 var lastName: String = "Stone"
@@ -114,11 +114,13 @@ print(fullName)
 ## Question 6
 
 Write code that adds 15 to `myIntString`, then prints the sum. Use the `Int()` constructor which returns an optional Int `(Int?)`.
-```
+```swift
+
 let myIntString = "35"
 let unwrappedMyIntStr: Int? = Int(myIntString)
 let sumIntString = (unwrappedMyIntStr!) + 15
 print("15 + \(unwrappedMyIntStr!) = \(sumIntString)")
+
 ```
 
 ## Question 7
@@ -176,11 +178,13 @@ var sumTestCase3: Int = 0
 Safely unwrap `tuple` if there’s a non-nil tuple value and print it out.
 
 ```swift
+
 var tuple: (Int, Int)?
 if Bool.random() {
  tuple = (5, 3)
 }
 ```
+```swift
     var tuple: (Int, Int)?
         if Bool.random() {
         tuple = (5, 3)
@@ -192,7 +196,7 @@ if Bool.random() {
         print("Error: value is nil!")
         }
 ```
-```
+
 ## Question 9
 
 Write code that either doubles `myInt` and then prints it, or prints an error message if myInt is nil.
@@ -203,7 +207,7 @@ if Bool.random() {
  myInt = 5
 }
 ```
-```
+```swift
 var myInt: Int?
 if Bool.random() {
     myInt = 5
@@ -218,7 +222,7 @@ if Bool.random() {
 
 Write code that prints out the product of `myDouble` and `doubleTwo` or prints an error message if `myDouble` is nil.
 
-```
+```swift
     var myDouble: Double?
     let doubleTwo: Double = 5
 
@@ -237,7 +241,7 @@ Write code that prints out the product of `myDouble` and `doubleTwo` or prints a
 
 Determine if the variable contains a Boolean or nil value. If nil set the variable to false, else keep it true.
 
-```
+```swift
 var isTheGreatest: Bool?
     if Bool.random() {
         isTheGreatest = true
@@ -255,9 +259,9 @@ var isTheGreatest: Bool?
 
 Given the code below print the sum of each non-nil element in `myTuple`.
 
- ```
- var myTuple: (Int?, Int?, Int?, Int?)
- if Bool.random() {
+ ```swift
+var myTuple: (Int?, Int?, Int?, Int?)
+if Bool.random() {
     myTuple.0 = 5
     myTuple.2 = 14
     } else {
@@ -340,7 +344,8 @@ evolutionaryStone = eStone()
 
 Given an optional int `numberOfPeople`, write code that unwraps and prints it **only if it is even**. Try using optional binding with a condition.
 
-```
+```swift
+
 var numberOfPeople: Int?
 if Bool.random() {
 numberOfPeople = 108
@@ -352,14 +357,14 @@ numberOfPeople = 108
         }
     }
 }
+
 ```
-
-
 ## Question 15
 
 Given the array of optional Ints `someNumbers`, write code to find the product of the array not including any nil values.
 
-```
+```swift
+
 var someNumbers: [Int?] = []
 for i in 0..<20 {
     someNumbers.append(Bool.random() ? i : nil)
@@ -379,7 +384,8 @@ for i in 0..<20 {
 
 Given the array `poorlyFormattedCityNames`, create a new array with the city names capitalized and any nil values removed.
 
-```
+```swift
+
 let poorlyFormattedCityNames: [String?] = ["new york", "BOSTON", nil, "chicago", nil, "los angeles", nil, "Dallas",]
 
     var newCityNames: [String] = []
@@ -395,6 +401,7 @@ let poorlyFormattedCityNames: [String?] = ["new york", "BOSTON", nil, "chicago",
 Given a random array of optional numbers, create a new array of all the even numbers that aren't nil.
 
 ```swift
+
 var aBunchOfNumbers: [Int?] = []
 
 for _ in 0..<20 {
@@ -415,7 +422,8 @@ var myEvenNumbers = [Int]()
 
 Given the following array of zip codes as strings, write code that turns them into an array of Ints.
 
-```
+```swift
+
 let zipCodeStrings = ["11377", "11101", "11373", "10014", "10003", "11223"]
 
 var zipCodeInts: [Int] = []
@@ -459,7 +467,9 @@ Consider the following nested optional. It corresponds to a number inside a box 
 - Optionally bind and print number.
 
 `let number: Int??? = 10`
-```let number: Int??? = 10
+```swift
+
+let number: Int??? = 10
     if let number0 = number {
         if let number1 = number0 {
             if let number2 = number1{
