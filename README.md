@@ -15,15 +15,16 @@ Write 3 different ways of safely unwrapping and printing the value of `userName`
 var userName: String?
     if userName != nil {
         print(userName!)
-    } else {
-    print("no name")
+        } else {
+        print("no name")
     }
+        
 //force unwrap
 var userName: String? = "eric w"
     if userName != nil {
         print(userName!)
-    } else {
-    print("no name")
+        } else {
+        print("no name")
     }
 
 - Method two: Optional binding
@@ -31,14 +32,14 @@ var userName: String? = "eRiC W"
 
     if let unwrappedUserName = userName {
         print(unwrappedUserName)
-    } else {
-    print("no name")
+        } else {
+        print("no name")
     }
 
 - Method three: Nil coalescing
-var userName: String?
-var unwrappedUserName = userName ?? "no name"
-print(unwrappedUserName)
+    var userName: String?
+    var unwrappedUserName = userName ?? "no name"
+    print(unwrappedUserName)
 ```
 
 ## Question 2
@@ -492,3 +493,25 @@ output: `"apesmonkeyslemurs"`
 Given the value below, print out all of the non-nil Ints it contains by accessing each of them.
 
 `var strangeStructure: ([Int]?, [[Int?]], [[Int]?], Int)? = ([1], [[2,3,4],[],[5,nil],[nil]], [nil, [6,7,8],nil,[],[9]], 10)`
+
+
+# 6.3 Optional Lab
+## Question 3
+
+a. Given the variables userOneName, userOneAge, and userOneHeight below, write code that prints "Hello Anne! You are 15 years old and 5.8 feet tall" (1 foot = 12 inches). Use optional binding.
+
+`var userOneName: String? = "Anne"
+var userOneAge: Int? = 15
+var userOneHeight: Double? = 70`
+
+```swift
+if let userName = userOneName, let userAge = userOneAge, let userHeight = userOneHeight {
+    let formattedStrInches = String(format: "%.1f", userHeight / 12)
+        print(" Hello \(userName)! \n You're \(userAge) and \(formattedStrInches) feet tall")
+    } else {
+        print("error found nil")
+    }
+}
+
+```
+

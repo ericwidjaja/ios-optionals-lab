@@ -1,7 +1,5 @@
 import UIKit
-
-//var str = "Optional July 8th, 2019 playground"
-////'check for nil and force unwrapped:
+//'check for nil and force unwrapped:
 //var userName: String?
 //if userName != nil {
 //    print(userName!)
@@ -367,8 +365,20 @@ import UIKit
 //}
 //print(newArr)
 
+//Question from 6.3 #3
+//Given the variables userOneName, userOneAge, and userOneHeight below, write code that prints "Hello Anne! You are 15 years old and 5.8 feet tall" (1 foot = 12 inches). Use optional binding.
 
+var userOneName: String? = "Anne"
+var userOneAge: Int? = 15
+var userOneHeight: Double? = 70
 
+if let userName = userOneName, let userAge = userOneAge, let userHeight = userOneHeight {
+    let formattedStrInches = String(format: "%.1f", userHeight / 12)
+    print(" Hello \(userName)! \n You're \(userAge) and \(formattedStrInches) feet tall")
+} else {
+    print("error found nil")
+}
+ 
 
 
 
