@@ -515,6 +515,7 @@ Give the variable favoriteNumber, write code that either prints "Your favorite n
 "I don't know what your favorite number is"
 
 favoriteNumber is of type Int? and will either be nil or a random number between 0 and 10. It will change each time you run your Playground.
+
 `var favoriteNumber = Bool.random() ? Int.random(in: 0...10) : nil`
 ```swift
     if favoriteNumber != nil {
@@ -530,6 +531,7 @@ Given the variables numOne, numTwo and numThree, write code that prints "The sum
 var numTwo = Bool.random() ? Int.random(in: 0...10) : nil
 var numThree = Bool.random() ? Int.random(in: 0...10) : nil`
 
+```swift
     var numArr = [numOne, numTwo, numThree]
     var numSum = 0
 
@@ -540,4 +542,23 @@ var numThree = Bool.random() ? Int.random(in: 0...10) : nil`
     }
 
     print("The sum of all the numbers is: \(numSum)")
+```
+## Question 6
+Given the variable numbers below, write code that prints "The sum of all the numbers is " followed by their sum. If a number is nil, don't add it to the sum. If all numbers are nil, the sum is zero.
 
+```swift
+var numbers = [Int?]()
+var sum = 0
+for _ in 0..<2 {
+    numbers.append(Bool.random() ? Int.random(in: 0...100) : nil)``
+    
+    for num in numbers {
+        if let numInt = num {
+//            print(numInt)
+            sum += numInt
+        }
+    }
+//    print(numbers)
+}
+print(" The sum of all the numbers is: \(sum)\n")
+```

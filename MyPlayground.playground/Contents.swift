@@ -367,48 +367,64 @@ import UIKit
 
 //Question from 6.3 #3
 //Given the variables userOneName, userOneAge, and userOneHeight below, write code that prints "Hello Anne! You are 15 years old and 5.8 feet tall" (1 foot = 12 inches). Use optional binding.
-
-var userOneName: String? = "Anne"
-var userOneAge: Int? = 15
-var userOneHeight: Double? = 70
-
-if let userName = userOneName, let userAge = userOneAge, let userHeight = userOneHeight {
-    let formattedStrInches = String(format: "%.1f", userHeight / 12)
-    print(" Hello \(userName)! \n You're \(userAge) and \(formattedStrInches) feet tall")
-} else {
-    print("error found nil")
-}
+//
+//var userOneName: String? = "Anne"
+//var userOneAge: Int? = 15
+//var userOneHeight: Double? = 70
+//
+//if let userName = userOneName, let userAge = userOneAge, let userHeight = userOneHeight {
+//    let formattedStrInches = String(format: "%.1f", userHeight / 12)
+//    print(" Hello \(userName)! \n You're \(userAge) and \(formattedStrInches) feet tall")
+//} else {
+//    print("error found nil")
+//}
 
 //Question from 6.3 #4
 //Give the variable favoriteNumber, write code that either prints "Your favorite number is " followed by the number, or "I don't know what your favorite number is"
 //favoriteNumber is of type Int? and will either be nil or a random number between 0 and 10. It will change each time you run your Playground.
 
 
-var favoriteNumber = Bool.random() ? Int.random(in: 0...10) : nil
-
-if favoriteNumber != nil {
-    print("Your fave number is: \(String(describing: favoriteNumber!))")
-} else {
-    print("I don't know your favorite number")
-}
+//var favoriteNumber = Bool.random() ? Int.random(in: 0...10) : nil
+//
+//if favoriteNumber != nil {
+//    print("Your fave number is: \(String(describing: favoriteNumber!))")
+//} else {
+//    print("I don't know your favorite number")
+//}
 
 //Given the variables numOne, numTwo and numThree, write code that prints "The sum of all the numbers is " followed by their sum. If a number is nil, don't add it to the sum. If all numbers are nil, the sum is zero.
+//
+//var numOne = Bool.random() ? Int.random(in: 0...10) : nil
+//var numTwo = Bool.random() ? Int.random(in: 0...10) : nil
+//var numThree = Bool.random() ? Int.random(in: 0...10) : nil
+//
+//var numArr = [numOne, numTwo, numThree]
+//var numSum = 0
+//
+//for num in numArr {
+//    if let numInt = num {
+//        numSum = numInt + numSum
+//    }
+//}
+//
+//print("The sum of all the numbers is: \(numSum)")
 
-var numOne = Bool.random() ? Int.random(in: 0...10) : nil
-var numTwo = Bool.random() ? Int.random(in: 0...10) : nil
-var numThree = Bool.random() ? Int.random(in: 0...10) : nil
-
-var numArr = [numOne, numTwo, numThree]
-var numSum = 0
-
-for num in numArr {
-    if let numInt = num {
-        numSum = numInt + numSum
-    }
-}
-
-print("The sum of all the numbers is: \(numSum)")
-
+////a. Given the variable numbers below, write code that prints "The sum of all the numbers is " followed by their sum. If a number is nil, don't add it to the sum. If all numbers are nil, the sum is zero.
+//
+//var numbers = [Int?]()
+//var sum = 0
+//for _ in 0..<2 {
+//    numbers.append(Bool.random() ? Int.random(in: 0...100) : nil)
+//    
+//    for num in numbers {
+//        if let numInt = num {
+////            print(numInt)
+//            sum += numInt
+//        }
+//    }
+////    print(numbers)
+//}
+//print(" The sum of all the numbers is: \(sum)\n")
 
 
 
