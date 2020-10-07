@@ -12,18 +12,21 @@ Write 3 different ways of safely unwrapping and printing the value of `userName`
 
 - Method one: Check for nil and force unwrap
 //Check for nil:
+
 var userName: String?
+    
     if userName != nil {
         print(userName!)
-        } else {
+    } else {
         print("no name")
     }
         
 //force unwrap
+
 var userName: String? = "eric w"
     if userName != nil {
         print(userName!)
-        } else {
+    } else {
         print("no name")
     }
 
@@ -32,7 +35,7 @@ var userName: String? = "eRiC W"
 
     if let unwrappedUserName = userName {
         print(unwrappedUserName)
-        } else {
+    } else {
         print("no name")
     }
 
@@ -62,25 +65,24 @@ Given an optional width and an optional height of a rectangle, write code that c
 ```swift
 var width: Double? = 7.0
 var height: Double?
+    
     if width == nil || height == nil {
         print("Error: area can not be calculated")
-        } else {
-            let widthInt = Int(width!.rounded())
-            let heightInt = Int(height!.rounded())
-            let area : Int = widthInt * heightInt
-            print(area)
-        }
+    } else {
+        let widthInt = Int(width!.rounded())
+        let heightInt = Int(height!.rounded())
+        let area : Int = widthInt * heightInt
+        print(area)
+    }
 ```
 
 ## Question 4
 
 Given the following optional variables `name`, `age` and `height`. Write code so that it prints `name`, `age` and `height` if they all have a value. If any are nil, print an error message. Try using optional binding.
 
-```swift
-var name: String?
+`var name: String?
 var age: Int?
-var height: Double?
-```
+var height: Double?`
 ```swift
 
 var name: String? = "Eric" //entered a value
@@ -98,11 +100,10 @@ var height: Double? = 6.0 //entered value
 
 Given the variables `firstName`, `middleName` and `lastName`. Create a variable called `fullName` that is a nicely formatted string.
 
-```swift
-var firstName: String = "Johnny"
+`var firstName: String = "Johnny"
 var middleName: String?
 var lastName: String = "Stone"
-```
+`
 ```swift
 
 var firstName: String = "Johnny"
@@ -116,12 +117,10 @@ print(fullName)
 
 Write code that adds 15 to `myIntString`, then prints the sum. Use the `Int()` constructor which returns an optional Int `(Int?)`.
 ```swift
-
-let myIntString = "35"
-let unwrappedMyIntStr: Int? = Int(myIntString)
-let sumIntString = (unwrappedMyIntStr!) + 15
-print("15 + \(unwrappedMyIntStr!) = \(sumIntString)")
-
+    let myIntString = "35"
+    let unwrappedMyIntStr: Int? = Int(myIntString)
+    let sumIntString = (unwrappedMyIntStr!) + 15
+    print("15 + \(unwrappedMyIntStr!) = \(sumIntString)")
 ```
 
 ## Question 7
@@ -252,10 +251,7 @@ var isTheGreatest: Bool?
     } else {
     print(false)
     }
-
 ```
-
-
 ## Question 12
 
 Given the code below print the sum of each non-nil element in `myTuple`.
@@ -495,7 +491,7 @@ Given the value below, print out all of the non-nil Ints it contains by accessin
 `var strangeStructure: ([Int]?, [[Int?]], [[Int]?], Int)? = ([1], [[2,3,4],[],[5,nil],[nil]], [nil, [6,7,8],nil,[],[9]], 10)`
 
 
-# 6.3 Optional Lab
+# 6.3 Optionals Lab
 ## Question 3
 
 a. Given the variables userOneName, userOneAge, and userOneHeight below, write code that prints "Hello Anne! You are 15 years old and 5.8 feet tall" (1 foot = 12 inches). Use optional binding.
@@ -514,4 +510,34 @@ if let userName = userOneName, let userAge = userOneAge, let userHeight = userOn
 }
 
 ```
+## Question 4
+Give the variable favoriteNumber, write code that either prints "Your favorite number is " followed by the number, or 
+"I don't know what your favorite number is"
+
+favoriteNumber is of type Int? and will either be nil or a random number between 0 and 10. It will change each time you run your Playground.
+`var favoriteNumber = Bool.random() ? Int.random(in: 0...10) : nil`
+```swift
+    if favoriteNumber != nil {
+        print("Your fave number is: \(String(describing: favoriteNumber!))")
+    } else {
+        print("I don't know your favorite number")
+    }
+```
+## Question 5
+Given the variables numOne, numTwo and numThree, write code that prints "The sum of all the numbers is " followed by their sum. If a number is nil, don't add it to the sum. If all numbers are nil, the sum is zero.
+
+`var numOne = Bool.random() ? Int.random(in: 0...10) : nil
+var numTwo = Bool.random() ? Int.random(in: 0...10) : nil
+var numThree = Bool.random() ? Int.random(in: 0...10) : nil`
+
+    var numArr = [numOne, numTwo, numThree]
+    var numSum = 0
+
+    for num in numArr {
+        if let numInt = num {
+            numSum = numInt + numSum
+        }
+    }
+
+    print("The sum of all the numbers is: \(numSum)")
 
